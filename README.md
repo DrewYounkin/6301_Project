@@ -2,7 +2,7 @@
 
 ### Basic Information
 
-* **Person or organization developing model**: Drew, `drew@acme.com`
+* **Person or organization developing model**: Drew Younkin, `drew_younkin@gwu.edu`
 * **Model date**: August, 2021
 * **Model version**: 1.0
 * **License**: MIT
@@ -31,13 +31,39 @@
 | **PAY_AMT1 - PAY_AMT6** | inputs | float | amount of previous payment; PAY_AMT1 = amount paid in September, 2005; PAY_AMT2 = amount paid in August, 2005; ...; PAY_AMT6 = amount paid in April, 2005 |
 | **DELINQ_NEXT**| target | int | whether a customer's next payment is delinquent (late), 1 = late; 0 = on-time |
 
-* **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
+* **Source of training data**: GWU Blackboard, email `drew_younkin@gwu.edu` for more information
 * **How training data was divided into training and validation data**: 50% training, 25% validation, 25% test
 * **Number of rows in training and validation data**:
   * Training rows: 15,000
   * Validation rows: 7,500
 
 ### Test Data
-* **Source of test data**: GWU Blackboard, email `drew@acme.com` for more information
+* **Source of test data**: GWU Blackboard, email `drew_younkin@gwu.edu` for more information
 * **Number of rows in test data**: 7,500
 * **State any differences in columns between training and test data**: None
+
+### Model Details
+* **Columns used as Inputs in Model**: Limit_Bal, Pay_0, Pay_2 - Pay_6, Bill_AMT1 - Bill_AMT6, Pay_AMT1 - Pay_AMT6
+* **Columns used as Target in Model**: DELINQ_NEXT
+* **Type of Model**: Decison Tree
+* **Software used to Implement Model**: Jupyter Notebook in Google Colab
+* **Version of Software**: Python 3.7.11
+* **Hyperparameters or other settings of model**: None
+
+### Quantatitve Analysis
+ 
+* **Metrics used to Evaluate Final Model**: Validation AUC, Test AUC, AIR between White and Hispance, Asian, Black and Female to Male AIR
+* **Training AUC**: 0.782
+* **Validation AUC**: 0.753
+* **Test AUC**: 0.748
+* **Hispanic - White AIR**: 0.82
+* **Black - White AIR**: 0.85
+* **Asian - White AIR**: 1.02
+* **Female - Male AIR**: 1.04
+#### Histograms for each Column
+![image](https://user-images.githubusercontent.com/89538749/131180228-dedb7c43-2917-455f-b751-83476527c730.png)
+#### Iteration Plot for First Model
+![image](https://user-images.githubusercontent.com/89538749/131180419-8e51442b-11c9-4ce6-b5d0-edadc7954faa.png)
+#### Iteration Plot for Final Model Adjusted for Bias
+![image](https://user-images.githubusercontent.com/89538749/131180626-9371d767-aaf3-4e50-9826-dd5776fbe36e.png)
+
