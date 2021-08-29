@@ -74,4 +74,6 @@
 
 ### Ethical Considerations
 
-One 
+One potential negative impact of the model is the possible residual bias issues.  When fixing the Hispanic - White AIR, we purposefully increased the number of Hispanics that would get approved a credit loan to make the proportion of Whites versus Hispanic who got accepted a credit loan closer to 1.  This might lead Hispancis getting approved for a credit loan more often than they should which means the money is being loaned out to people who shouldn't be getting and not to the people who actually should be.
+
+An uncertainty in the model is that the variable Pay_0 is much more significant than any other variable.  This means that whether or not someone paid in September matters way more than any other month.  If someone misses a payment in September it will effect their chance of getting the credit loan much more than if someone missed a payment in any other month.  This causes us to have some uncertainity in the model as the model is heavily based on the September payment which can lead to people being wrongly rejected or accepeted for a loan.
