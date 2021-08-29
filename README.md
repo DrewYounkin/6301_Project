@@ -46,9 +46,14 @@
 * **Columns used as Inputs in Model**: Limit_Bal, Pay_0, Pay_2 - Pay_6, Bill_AMT1 - Bill_AMT6, Pay_AMT1 - Pay_AMT6
 * **Columns used as Target in Model**: DELINQ_NEXT
 * **Type of Model**: Decison Tree
-* **Software used to Implement Model**: Jupyter Notebook in Google Colab
-* **Version of Software**: Python 3.7.11
-* **Hyperparameters or other settings of model**: None
+* **Software used to Implement Model**: Jupyter Notebook in Google Colab, Scikit Learn
+* **Version of Software**: 0.22.2.post1
+* **Hyperparameters or other settings of model**: cp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=6, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=1234, splitter='best
 
 ### Quantatitve Analysis
  
@@ -67,3 +72,6 @@
 #### Iteration Plot for Final Model Adjusted for Bias
 ![image](https://user-images.githubusercontent.com/89538749/131180626-9371d767-aaf3-4e50-9826-dd5776fbe36e.png)
 
+### Ethical Considerations
+
+One 
